@@ -34,9 +34,9 @@ public class MMORPGClient {
             String userInput;
             while ((userInput = consoleInput.readLine()) != null) {
                 if (userInput.startsWith("MOVE:")) {
-                    // for (int i = 0; i < 100000000; i++) {
+                     for (int i = 0; i < 100000000; i++) {
                         out.println(userInput); // Send movement data to server
-                    // }
+                     }
                 }
             }
         } catch (IOException e) {
@@ -44,6 +44,7 @@ public class MMORPGClient {
         }
     }
 }
+
 
 
 
