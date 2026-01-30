@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.*;
 
 public class MMORPGClient {
-    private static final String SERVER_ADDRESS = "127.0.0.1";
+    private static final String SERVER_ADDRESS = "10.0.101.71";
     private static final int SERVER_PORT = 12345;
 
     public static void main(String[] args) {
@@ -44,4 +44,5 @@ public class MMORPGClient {
         }
     }
 }
+
 
