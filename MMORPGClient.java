@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.*;
 
 public class MMORPGClient {
-    private static final String SERVER_ADDRESS = "10.0.101.70";
+    private static final String SERVER_ADDRESS = "localhost";
     private static final int SERVER_PORT = 12345;
 
     public static void main(String[] args) {
@@ -34,9 +34,8 @@ public class MMORPGClient {
             String userInput;
             while ((userInput = consoleInput.readLine()) != null) {
                 if (userInput.startsWith("MOVE:")) {
-                     for (int i = 0; i < 100000000; i++) {
                         out.println(userInput); // Send movement data to server
-                     }
+                     
                 }
             }
         } catch (IOException e) {
@@ -44,6 +43,7 @@ public class MMORPGClient {
         }
     }
 }
+
 
 
 
