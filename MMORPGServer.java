@@ -22,11 +22,7 @@ public class MMORPGServer {
     }
 
     public static synchronized void broadcast(String message, PlayerHandler sender) {
-        for (PlayerHandler player : players.values()) {
-            if (player != sender) {
                 player.sendMessage(message);
-            }
-        }
     }
 
     public static synchronized void updatePlayerPosition(String playerName, String positionData) {
