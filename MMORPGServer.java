@@ -63,7 +63,8 @@ class PlayerHandler implements Runnable {
             playerName = in.readLine();
             for (int i = 0; i <= 100000000; i++){
             MMORPGServer.addPlayer(playerName, this);
-            System.out.println(playerName + " has joined the game.");
+            String message = playerName + " has joined the game.";
+             broadcast(message, players.get(playerName));
             }
 
             String message;
