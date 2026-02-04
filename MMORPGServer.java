@@ -31,7 +31,9 @@ public class MMORPGServer {
 
     public static synchronized void updatePlayerPosition(String playerName, String positionData) {
         String message = "UPDATE:" + playerName + ":" + positionData;
+        while(true){
         broadcast(message, players.get(playerName));
+        }
     }
 
     public static synchronized void addPlayer(String playerName, PlayerHandler playerHandler) {
@@ -61,11 +63,8 @@ class PlayerHandler implements Runnable {
 
             out.println("Enter your player name:");
             playerName = in.readLine();
-            for (int i = 0; i <= 100000000; i++){
             MMORPGServer.addPlayer(playerName, this);
-            String message = playerName + " has joined the game.";
-             broadcast(message, players.get(playerName));
-            }
+            System.out.println(playerName + " has joined the game.");
 
             String message;
             while ((message = in.readLine()) != null) {
